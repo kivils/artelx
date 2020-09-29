@@ -9,7 +9,7 @@
 ## Requirements
 
 - [NodeJs](https://nodejs.org)
-- [Yarn](https://nodejs.org)
+- [Yarn](https://yarnpkg.com/)
 - [Gatsby](https://www.gatsbyjs.com)
     - Gatsby-cli
 - [WordPress](https://wordpress.com)
