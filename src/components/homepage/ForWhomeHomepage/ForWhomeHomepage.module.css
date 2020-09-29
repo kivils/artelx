@@ -1,0 +1,16 @@
+:local(.root) {
+  padding: 20px 0;
+  background-color: lightcyan;
+}
+
+:local(.container) {
+  position: relative;
+}
+
+:local(.item) {
+  padding-right: calc(100% - 280px);
+  height: 480px;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+

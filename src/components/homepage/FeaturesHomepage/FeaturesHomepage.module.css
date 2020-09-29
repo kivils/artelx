@@ -1,0 +1,54 @@
+:local(.root) {
+
+}
+
+:local(.row) {
+  padding: 20px 0;
+}
+
+:local(.col) {
+
+}
+
+
+:local(.title) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 116px;
+  max-width: 300px;
+  min-height: 96px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+:local(.content) {
+  margin-bottom: 10px;
+}
+
+:local(.content) p {
+  margin-bottom: 10px;
+}
+
+:local(.footer) {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid blue;
+}
+
+@media (min-width: 768px) {
+  :local(.row) {
+    display: flex;
+    margin-right: -10px;
+    margin-left: -10px;
+    min-height: 1px;
+  }
+
+  :local(.col) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
