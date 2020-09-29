@@ -1,7 +1,7 @@
 {
   "name": "artelx",
   "private": false,
-  "description": "Site for ArtelX. Built with Gatsby and WordPress",
+  "description": "Static site for ArtelX. Built with Gatsby and WordPress",
   "version": "0.1.0",
   "author": "Julia Sesyunina <idwebkivils@gmail.com>",
   "dependencies": {
@@ -40,6 +40,6 @@
     "url": "https://github.com/kivils/artelx"
   },
   "bugs": {
-    "url": "https://github.com/kivils/artelx"
+    "url": "https://github.com/kivils/artelx/issues"
   }
 }
