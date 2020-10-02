@@ -1,3 +1,41 @@
 :local(.root) {
-  background-color: navajowhite;
+  padding: 40px 0;
+}
+
+:local(.title) {
+  text-align: center;
+}
+
+:local(.item) {
+
+}
+
+:local(.aside) {
+  text-align: center;
+  color: #000;
+}
+
+:local(.name) {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+:local(.content) {
+  color: #2F2D44;
+}
+
+@media (min-width: 768px) {
+  :local(.item) {
+    display: flex;
+  }
+
+  :local(.aside) {
+    flex: 0 0 250px;
+  }
+
+  :local(.content) {
+    flex: 1 1 auto;
+    max-width: calc(100% - 250px);
+    padding-left: 20px;
+  }
 }

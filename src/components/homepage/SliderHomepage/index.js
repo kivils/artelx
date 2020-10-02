@@ -7,7 +7,7 @@ const SliderHomepage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-          allWpPage(filter: {parentDatabaseId: {eq: 97}}, sort: {fields: databaseId, order: ASC}) {
+          allWpPage(filter: {parentDatabaseId: {eq: 37}}, sort: {fields: databaseId, order: ASC}) {
               nodes {
                   title
                   slug
@@ -31,7 +31,7 @@ const SliderHomepage = () => {
         <Link
           key={node.databaseId}
           to={node.slug}
-          className={`${styles.item} ${styles['is-' + node.databaseId]}`}
+          className={`${styles.item} page_${node.databaseId}`}
           style={{
             backgroundImage: node.featuredImage && 'url(' + node.featuredImage.node.mediaItemUrl + ')'
           }}

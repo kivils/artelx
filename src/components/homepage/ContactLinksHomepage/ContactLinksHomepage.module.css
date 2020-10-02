@@ -1,3 +1,34 @@
 :local(.root) {
-  background-color: lavender;
+  padding: 40px 0;
+  background-color: #008EB3;
+}
+
+:local(.title) {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.25rem;
+  color: var(--color-link-hover);
+}
+
+:local(.link) {
+  font-size: 1.5rem;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  vertical-align: top;
+  border-left: 3px solid var(--color-link-hover);
+}
+
+@media (min-width: 992px) {
+  :local(.link) {
+    margin-right: 3%;
+    width: 47%;
+  }
+}
+
+@media (min-width: 1200px) {
+  :local(.link) {
+    width: 30%;
+  }
 }

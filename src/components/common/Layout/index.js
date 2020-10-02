@@ -11,6 +11,7 @@ import PropTypes from "prop-types"
 import Header from "../Header"
 import "./normalize.css"
 import "./reset.local.css"
+import "./typography.css"
 
 import SiteTitleQUery from "../../../queries"
 

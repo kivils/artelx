@@ -3,9 +3,9 @@ import styles from './Container.module.css'
 
 const Container = ({ children, className }) => {
   return (
-    <section className={`${styles.root} ${className}`}>
+    <div className={`${styles.root} ${className}`}>
       {children}
-    </section>
+    </div>
   )
 }
 

@@ -1,3 +1,64 @@
 :local(.root) {
-  background-color: lightcyan;
+
+}
+
+:local(.item) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+  text-align: center;
+  min-height: 300px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+:local(.content) {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+:local(.title) {
+  font-size: 2rem;
+  color: #fff;
+}
+
+:local(.text) {
+  font-size: 1.5rem;
+  color: #FFF7E0;
+}
+
+@media (min-width: 992px) {
+  :local(.item) {
+    text-align: right;
+  }
+
+  :local(.content) {
+    margin-right: 0;
+  }
+
+  :local(.title) {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+
+  :local(.text) {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :local(.item) {
+    min-height: 480px;
+  }
+
+  :local(.title) {
+    font-size: 4rem;
+  }
+
+  :local(.text) {
+    font-size: 2rem;
+  }
 }

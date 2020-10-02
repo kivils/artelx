@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import Container from '../../common/Container'
 import styles from './ContactLinksHomepage.module.css'
 
 const ContactLinksHomepage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-          allWpPage(filter: {parentDatabaseId: {eq: 179}}, sort: { fields: [databaseId] }) {
+          allWpPage(filter: {parentDatabaseId: {eq: 109}}, sort: { fields: [databaseId] }) {
               nodes {
                   title
                   slug
@@ -25,14 +26,18 @@ const ContactLinksHomepage = () => {
   )
   return (
     <div className={styles.root}>
-      <h2>Расскажите нам о своей проблеме</h2>
-      {data.allWpPage.nodes.map((node) => (
-        <div className={'page-' + node.databaseId} key={node.databaseId}>
-          <Link to={node.slug}>
-            <div>{node.title}</div>
+      <Container className={styles.container}>
+        <h2 className={styles.title}>Расскажите нам о своей проблеме</h2>
+        {data.allWpPage.nodes.map((node) => (
+          <Link
+            key={node.databaseId}
+            to={node.slug}
+            className={styles.link}
+          >
+            {node.title}
           </Link>
-        </div>
-      ))}
+        ))}
+      </Container>
     </div>
   )
 }

@@ -4,6 +4,7 @@
 
 :local(.item) {
   position: relative;
+  padding: 20px 0;
   min-height: 480px;
   display: block;
   text-decoration: none;
