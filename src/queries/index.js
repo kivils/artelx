@@ -1,15 +1,18 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-const SiteTitleQuery = () => {
+const SiteMetaQuery = () => {
   return useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteMetaQuery {
       site {
         siteMetadata {
           title
+          subtitle
+          email
+          phone
         }
       }
     }
   `)
 }
 
-export default SiteTitleQuery
+export default SiteMetaQuery

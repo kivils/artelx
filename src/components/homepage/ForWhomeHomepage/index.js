@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+
 import Container from '../../common/Container'
 import styles from './ForWhomeHomepage.module.css'
 

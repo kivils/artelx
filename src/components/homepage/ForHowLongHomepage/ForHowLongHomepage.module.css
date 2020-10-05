@@ -3,6 +3,7 @@
 }
 
 :local(.item) {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,8 +16,10 @@
 }
 
 :local(.content) {
+  position: relative;
   margin: 0 auto;
   max-width: 500px;
+  z-index: 2;
 }
 
 :local(.title) {
@@ -27,6 +30,22 @@
 :local(.text) {
   font-size: 1.5rem;
   color: #FFF7E0;
+}
+
+:local(.imgWrapper) {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+:local(.img) {
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 992px) {

@@ -1,11 +1,19 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Container from '../../common/Container'
 import styles from './TestimonialsHomepage.module.css'
 
 const TestimonialsHomepage = () => {
   const data = useStaticQuery(
     graphql`
+      fragment Thumbnail on File {
+        childImageSharp {
+          fixed(width: 173) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       query {
           allWpPage(filter: {parentDatabaseId: {eq: 73}}, sort: { fields: [databaseId] }) {
               nodes {
@@ -16,8 +24,10 @@ const TestimonialsHomepage = () => {
                   databaseId
                   featuredImage {
                     node {
-                      mediaItemUrl
                       altText
+                      remoteFile {
+                        ...Thumbnail
+                      }
                     }
                   }
               }
@@ -35,9 +45,14 @@ const TestimonialsHomepage = () => {
             className={`${styles.item} page_${node.databaseId}`}
           >
             <div className={styles.aside}>
-              {node.featuredImage &&
-              <img src={node.featuredImage.node.mediaItemUrl} alt={node.featuredImage.node.altText || node.title}/>
-              }
+              {!!node?.featuredImage?.node?.remoteFile?.childImageSharp && (
+                <Img
+                  fixed={
+                    node.featuredImage.node.remoteFile.childImageSharp.fixed
+                  }
+                  alt={node.featuredImage.node.altText ? node.featuredImage.node.altText : node.title}
+                />
+              )}
               <div className={styles.name}>{node.title}</div>
               {node.job_title && <div className={styles.info}>{node.job_title}</div>}
             </div>

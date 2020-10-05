@@ -1,5 +1,6 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
+import Img from 'gatsby-image'
 import Container from '../../common/Container'
 import styles from './ForHowLongHomepage.module.css'
 
@@ -14,8 +15,10 @@ const ForHowLongHomepage = () => {
                   databaseId
                   featuredImage {
                     node {
-                      mediaItemUrl
                       altText
+                      remoteFile {
+                        ...ThumbnailHomepage
+                      }
                     }
                   }
               }
@@ -31,12 +34,24 @@ const ForHowLongHomepage = () => {
           className={`${styles.item} page_${node.databaseId}`}
           style={{
             backgroundColor: '#884d42',
-            backgroundImage: node.featuredImage && 'url(' + node.featuredImage.node.mediaItemUrl + ')'
           }}
         >
-          <Container className={styles.content}>
-            <h2 className={styles.title}>{node.title}</h2>
-            <div className={styles.text} dangerouslySetInnerHTML={{__html: node.content}}/>
+          {!!node?.featuredImage?.node?.remoteFile?.childImageSharp && (
+            <div className={styles.imgWrapper}>
+              <Img
+                fluid={
+                  node.featuredImage.node.remoteFile.childImageSharp.fluid
+                }
+                className={styles.img}
+                alt={node.featuredImage.node.altText ? node.featuredImage.node.altText : node.title}
+              />
+            </div>
+          )}
+          <Container>
+            <div className={styles.content}>
+              <h2 className={styles.title}>{node.title}</h2>
+              <div className={styles.text} dangerouslySetInnerHTML={{__html: node.content}}/>
+            </div>
           </Container>
         </div>
       ))}

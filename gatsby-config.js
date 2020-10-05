@@ -5,9 +5,12 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `ArtelX`,
-    description: `Description`,
-    author: `author`,
+    title: `Артеликс`,
+    subtitle: `Интернет-маркетинг для малого бизнеса`,
+    email: `mail@artelx.ru`,
+    phone: `+7(953) 163 2748`,
+    description: `Интернет-маркетинг для малого бизнеса`,
+    author: `artelx`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,8 +45,8 @@ module.exports = {
         name: `artelx`,
         short_name: `artelx`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#A7E5E0`,
+        theme_color: `#A7E5E0`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

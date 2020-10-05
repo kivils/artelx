@@ -1,11 +1,19 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Container from '../../common/Container'
 import styles from './SliderHomepage.module.css'
 
 const SliderHomepage = () => {
   const data = useStaticQuery(
     graphql`
+      fragment ThumbnailHomepage on File {
+        childImageSharp {
+          fluid(maxWidth: 2560) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       query {
           allWpPage(filter: {parentDatabaseId: {eq: 37}}, sort: {fields: databaseId, order: ASC}) {
               nodes {
@@ -15,8 +23,10 @@ const SliderHomepage = () => {
                   databaseId
                   featuredImage {
                     node {
-                      mediaItemUrl
                       altText
+                      remoteFile {
+                        ...ThumbnailHomepage
+                      }
                     }
                   }
               }
@@ -32,10 +42,18 @@ const SliderHomepage = () => {
           key={node.databaseId}
           to={node.slug}
           className={`${styles.item} page_${node.databaseId}`}
-          style={{
-            backgroundImage: node.featuredImage && 'url(' + node.featuredImage.node.mediaItemUrl + ')'
-          }}
         >
+          {!!node?.featuredImage?.node?.remoteFile?.childImageSharp && (
+            <div className={styles.imgWrapper}>
+              <Img
+                fluid={
+                  node.featuredImage.node.remoteFile.childImageSharp.fluid
+                }
+                className={styles.img}
+                alt={node.featuredImage.node.altText ? node.featuredImage.node.altText : node.title}
+              />
+            </div>
+          )}
           <Container className={styles.content}>
             <h2 className={styles.title}>{node.title}</h2>
             <div className={styles.subtitle} dangerouslySetInnerHTML={{__html: node.content}}/>

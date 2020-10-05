@@ -13,13 +13,18 @@ import "./normalize.css"
 import "./reset.local.css"
 import "./typography.css"
 
-import SiteTitleQUery from "../../../queries"
+import SiteMetaQuery from "../../../queries"
 
 const Layout = ({ children }) => {
-  const data = SiteTitleQUery()
+  const data = SiteMetaQuery()
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        subTitle={data.site.siteMetadata?.subtitle || `SubTitle`}
+        email={data.site.siteMetadata?.email || `email`}
+        phone={data.site.siteMetadata?.phone || `phone`}
+      />
       <div>
         <main>{children}</main>
       </div>
