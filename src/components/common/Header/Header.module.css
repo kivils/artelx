@@ -1,3 +1,84 @@
 :local(.root) {
   padding: 20px 0;
 }
+
+:local(.container) {
+  @media (min-width:768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+:local(.logoWrapper) {
+  margin-bottom: 1rem;
+
+  @media (min-width:768px) {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+:local(.logoLink) {
+  display: flex;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  @media (min-width:768px) {
+
+  }
+}
+
+:local(.logoText) {
+
+}
+
+:local(.title) {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-link);
+}
+
+:local(.subtitle) {
+  display: block;
+  color: var(--color-base);
+}
+
+:local(.info) {
+  margin-bottom: 1rem;
+  text-align: right;
+
+  @media (min-width:768px) {
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
+
+:local(.email) {
+  display: block;
+  margin-bottom: .5rem;
+  color: red;
+
+  &:hover {
+    color: pink;
+  }
+}
+
+:local(.phone) {
+  display: block;
+  font-weight: 700;
+  color: red;
+
+  &:hover {
+    color: pink;
+  }
+}
+
+:local(.actions) {
+  @media (min-width:768px) {
+    margin-left: 1rem;
+  }
+}

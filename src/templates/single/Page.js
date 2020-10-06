@@ -1,6 +1,8 @@
-import React from "react"
-import Layout from "../../components/common/Layout"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../../components/common/Layout'
+import SEO from '../../components/common/Seo'
+import Container from '../../components/common/Container'
 
 const Page = ({ data }) => {
   const { /*nextPage, previousPage, */page } = data
@@ -8,8 +10,11 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <SEO title={title} />
+      <Container>
+        <h1>{title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+      </Container>
     </Layout>
   )
 }

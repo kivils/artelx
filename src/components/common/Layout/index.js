@@ -5,15 +5,16 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Header from "../Header"
-import "./normalize.css"
-import "./reset.local.css"
-import "./typography.css"
+import Header from '../Header'
+import Mainmenu from '../Mainmenu'
+import './normalize.css'
+import './reset.local.css'
+import './typography.css'
 
-import SiteMetaQuery from "../../../queries"
+import SiteMetaQuery from '../../../queries'
 
 const Layout = ({ children }) => {
   const data = SiteMetaQuery()
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
         email={data.site.siteMetadata?.email || `email`}
         phone={data.site.siteMetadata?.phone || `phone`}
       />
+      <Mainmenu/>
       <div>
         <main>{children}</main>
       </div>

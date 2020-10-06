@@ -2,6 +2,7 @@
   --color-base: #494949;
   --color-link: #00B5CC;
   --color-link-hover: #A7E5E0;
+  --spacer: 15px;
 }
 *,
 *::before,
@@ -11,8 +12,12 @@
 
 a {
   text-decoration: none;
-  color: var(--color-link);
   cursor: pointer;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 button {

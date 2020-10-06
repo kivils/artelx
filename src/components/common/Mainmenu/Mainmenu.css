@@ -1,0 +1,35 @@
+:local(.root) {
+  margin-bottom: 30px;
+
+  @media (min-width:768px) {
+    text-align: right;
+  }
+}
+
+:local(.nav) {
+
+}
+
+:local(.list) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+:local(.item) {
+  margin-left: 1rem;
+}
+
+:local(.link) {
+  padding: 3px 2px;
+  color: var(--color-base);
+  border-bottom: 3px solid transparent;
+
+  &:hover {
+    color: red;
+  }
+
+  &:local(.active) {
+    color: red;
+    border-color: var(--color-link);
+  }
+}

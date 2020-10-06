@@ -1,0 +1,13 @@
+:local(.root) {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+  border-radius: 4px;
+  background-color: yellow;
+
+  &:hover {
+    opacity: .8;
+  }
+}
