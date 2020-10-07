@@ -10,7 +10,7 @@
   margin-bottom: 30px;
   padding-bottom: 30px;
   text-align: center;
-  border-bottom: 1px solid #00B5CC;
+  border-bottom: 1px solid var(--color-link);
 }
 
 :local(.col):last-child {
@@ -20,7 +20,7 @@
 }
 
 :local(.link) {
-  color: #494949;
+  color: var(--color-base);
 }
 
 :local(.title) {
@@ -72,6 +72,6 @@
 
   :local(.footer) {
     padding-top: 10px;
-    border-top: 1px solid #00B5CC;
+    border-top: 1px solid var(--color-link);
   }
 }

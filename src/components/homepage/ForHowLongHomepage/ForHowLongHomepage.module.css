@@ -24,7 +24,7 @@
 
 :local(.title) {
   font-size: 2rem;
-  color: #fff;
+  color: var(--color-white);
 }
 
 :local(.text) {

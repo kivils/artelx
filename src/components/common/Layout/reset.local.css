@@ -1,7 +1,18 @@
 :root {
   --color-base: #494949;
+  --color-artelx: #1A68A4;
+
   --color-link: #00B5CC;
-  --color-link-hover: #A7E5E0;
+  --color-link-hover: #007FA3;
+  --color-active: #FF0000;
+
+  --color-primary: #19C1ED;
+  --color-secondary: #FFDF39;
+  --color-tertiary: #A7E5E0;
+
+  --color-black: #000;
+  --color-white: #FFF;
+
   --spacer: 15px;
 }
 *,

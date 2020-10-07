@@ -25,11 +25,11 @@
   border-bottom: 3px solid transparent;
 
   &:hover {
-    color: red;
+    color: var(--color-link-hover);
   }
 
   &:local(.active) {
-    color: red;
-    border-color: var(--color-link);
+    color: var(--color-active);
+    border-color: var(--color-primary);
   }
 }
