@@ -10,7 +10,7 @@
 }
 
 :local(.logoWrapper) {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   @media (min-width:768px) {
     margin-right: 1rem;
@@ -18,62 +18,45 @@
   }
 }
 
-:local(.logoLink) {
-  display: flex;
-
-  &:hover {
-    opacity: .8;
-  }
-
-  @media (min-width:768px) {
-
-  }
-}
-
-:local(.logoText) {
-
-}
-
-:local(.title) {
-  display: block;
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--color-artelx);
-}
-
-:local(.subtitle) {
-  display: block;
-  color: var(--color-base);
-}
-
 :local(.info) {
-  margin-bottom: 1rem;
-  text-align: right;
+  margin-bottom: 2rem;
+  text-align: center;
 
   @media (min-width:768px) {
     margin-bottom: 0;
     margin-left: auto;
+    text-align: right;
   }
 }
 
 :local(.email) {
   display: block;
   margin-bottom: .5rem;
-  color: red;
+  font-size: 1.5rem;
+  color: var(--color-active);
 
   &:hover {
-    color: pink;
+    color: var(--color-link-hover);
+  }
+
+  @media (min-width:768px) {
+    font-size: 1rem;
   }
 }
 
 :local(.phone) {
   display: block;
   font-weight: 700;
-  color: red;
+  font-size: 1.5rem;
+  color: var(--color-active);
+  white-space: nowrap;
 
   &:hover {
-    color: pink;
+    color: var(--color-link-hover);
+  }
+
+  @media (min-width:768px) {
+    font-size: 1rem;
   }
 }
 
@@ -81,4 +64,8 @@
   @media (min-width:768px) {
     margin-left: 1rem;
   }
+}
+
+:local(.btn) {
+  width: 100%;
 }

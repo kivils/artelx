@@ -11,17 +11,27 @@ const Mainmenu = () => {
           <ul className={styles.list}>
             <li className={`${styles.item} ${styles.active}`}>
               <a href="/" className={`${styles.link} ${styles.active}`}>
-                Контекст
+                Контекстная реклама
               </a>
             </li>
             <li className={styles.item}>
               <a href="/" className={styles.link}>
-                Продвижение
+                Продвижение сайтов
               </a>
             </li>
             <li className={styles.item}>
               <a href="/" className={styles.link}>
-                Контакты
+                Создание сайтов
+              </a>
+            </li>
+            <li className={styles.item}>
+              <a href="/" className={styles.link}>
+                Блог
+              </a>
+            </li>
+            <li className={styles.item}>
+              <a href="/" className={styles.link}>
+                О компании
               </a>
             </li>
           </ul>

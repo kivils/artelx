@@ -1,0 +1,4 @@
+@import "./_normalize.css";
+@import "./_reset.local.css";
+@import "./_typography.css";
+@import '~pure-react-carousel/dist/react-carousel.es.css';

@@ -1,0 +1,25 @@
+:local(.root) {
+  padding: 20px 0;
+  background-color: #2F2D44;
+}
+
+:local(.row) {
+  @media (min-width:768px) {
+    display: flex;
+    margin: 0 -15px;
+    min-height: 1px;
+  }
+}
+
+:local(.col) {
+  padding-bottom: 15px;
+
+  &:first-child {
+    padding-bottom: 0;
+  }
+
+  @media (min-width:768px) {
+    flex: 0 0 50%;
+    padding: 0 15px;
+  }
+}

@@ -13,6 +13,8 @@
   --color-black: #000;
   --color-white: #FFF;
 
+  --color-gray-dark: #2F2D44;
+
   --spacer: 15px;
 }
 *,
@@ -37,6 +39,10 @@ button {
   border-width: 0;
   padding: 0;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 figure {

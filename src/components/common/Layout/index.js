@@ -9,10 +9,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Header from '../Header'
+import Footer from '../Footer'
 import Mainmenu from '../Mainmenu'
-import './normalize.css'
-import './reset.local.css'
-import './typography.css'
+import './Layout.css'
 
 import SiteMetaQuery from '../../../queries'
 
@@ -27,9 +26,11 @@ const Layout = ({ children }) => {
         phone={data.site.siteMetadata?.phone || `phone`}
       />
       <Mainmenu/>
-      <div>
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
+      <Footer
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        subTitle={data.site.siteMetadata?.subtitle || `SubTitle`}
+      />
     </>
   )
 }

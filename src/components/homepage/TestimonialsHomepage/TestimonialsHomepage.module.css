@@ -6,6 +6,25 @@
   text-align: center;
 }
 
+:local(.list) {
+  position: relative;
+}
+
+:local(.btn) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  &:local(.prev) {
+    left: 0;
+  }
+
+  &:local(.next) {
+    right: 0;
+  }
+}
+
 :local(.item) {
 
 }

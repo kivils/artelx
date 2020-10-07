@@ -3,10 +3,10 @@ import styles from './Button.module.css'
 
 import PropTypes from 'prop-types'
 
-const Button = ({ children, disabled }) => {
+const Button = ({ children, className, disabled }) => {
   return (
     <button
-      className={styles.root}
+      className={`${styles.root} ${className}`}
       disabled={disabled}
     >
       {children}
@@ -16,6 +16,7 @@ const Button = ({ children, disabled }) => {
 
 Button.propTypes = {
   children: PropTypes.any,
+  className: PropTypes.string,
   disabled: PropTypes.bool,
 }
 

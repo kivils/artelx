@@ -1,0 +1,51 @@
+:local(.root) {
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  @media (min-width:768px) {
+    justify-content: flex-start;
+  }
+}
+
+:local(.img) {
+
+}
+
+:local(.text) {
+  margin-left: 1rem;
+}
+
+:local(.title) {
+  display: block;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-artelx);
+}
+
+:local(.subtitle) {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--color-gray-dark);
+}
+
+:local(.isFooter) :local(.title) {
+  font-size: 24px;
+  letter-spacing: initial;
+  color: var(--color-primary);
+}
+
+:local(.isFooter) :local(.subtitle) {
+  font-size: 10px;
+  color: var(--color-primary);
+}
+
+:local(.isFooter) :local(.img) {
+  width: 50px;
+}
