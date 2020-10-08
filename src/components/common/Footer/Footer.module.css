@@ -23,3 +23,23 @@
     padding: 0 15px;
   }
 }
+
+:local(.nav) {
+
+}
+
+:local(.list) {
+
+}
+
+:local(.item) {
+
+}
+
+:local(.link  ) {
+  color: var(--color-white);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

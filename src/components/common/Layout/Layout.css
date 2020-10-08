@@ -2,3 +2,15 @@
 @import "./_reset.local.css";
 @import "./_typography.css";
 @import '~pure-react-carousel/dist/react-carousel.es.css';
+
+:local(.root) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+:local(.footer) {
+  margin-top: auto;
+}

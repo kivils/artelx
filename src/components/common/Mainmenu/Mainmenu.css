@@ -30,7 +30,7 @@
     color: var(--color-link-hover);
   }
 
-  &:local(.active) {
+  &:local(.isActive) {
     color: var(--color-active);
     border-color: var(--color-primary);
   }

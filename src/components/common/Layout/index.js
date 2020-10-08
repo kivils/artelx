@@ -11,27 +11,29 @@ import PropTypes from 'prop-types'
 import Header from '../Header'
 import Footer from '../Footer'
 import Mainmenu from '../Mainmenu'
-import './Layout.css'
+import styles from './Layout.css'
 
 import SiteMetaQuery from '../../../queries'
 
 const Layout = ({ children }) => {
   const data = SiteMetaQuery()
   return (
-    <>
+    <div className={styles.root}>
       <Header
+        className={styles.header}
         siteTitle={data.site.siteMetadata?.title || `Title`}
         subTitle={data.site.siteMetadata?.subtitle || `SubTitle`}
         email={data.site.siteMetadata?.email || `email`}
         phone={data.site.siteMetadata?.phone || `phone`}
       />
       <Mainmenu/>
-      <main>{children}</main>
+      <main className={styles.menu}>{children}</main>
       <Footer
+        className={styles.footer}
         siteTitle={data.site.siteMetadata?.title || `Title`}
         subTitle={data.site.siteMetadata?.subtitle || `SubTitle`}
       />
-    </>
+    </div>
   )
 }
 
