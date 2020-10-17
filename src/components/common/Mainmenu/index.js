@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Container from '../Container'
 
-import styles from './Mainmenu.css'
+import styles from './Mainmenu.module.css'
 
 const Mainmenu = () => {
   const data = useStaticQuery(

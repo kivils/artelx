@@ -11,7 +11,9 @@ import PropTypes from 'prop-types'
 import Header from '../Header'
 import Footer from '../Footer'
 import Mainmenu from '../Mainmenu'
-import styles from './Layout.css'
+
+import './basic-styles.css'
+import styles from './Layout.module.css'
 
 import SiteMetaQuery from '../../../queries'
 
@@ -26,8 +28,8 @@ const Layout = ({ children }) => {
         email={data.site.siteMetadata?.email || `email`}
         phone={data.site.siteMetadata?.phone || `phone`}
       />
-      <Mainmenu/>
-      <main className={styles.menu}>{children}</main>
+      <Mainmenu styles={styles.menu}/>
+      <main className={styles.main}>{children}</main>
       <Footer
         className={styles.footer}
         siteTitle={data.site.siteMetadata?.title || `Title`}

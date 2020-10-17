@@ -1,0 +1,288 @@
+/**
+ Styles for WP content from wp theme twentytwenty
+ REF: Check necessity!
+ */
+
+/* -------------------------------------------------------------------------- */
+
+/*	.entry-content
+/* -------------------------------------------------------------------------- */
+
+.entry-content {
+  /* Place inner styles here after postcss-nesting plugin will be set up */
+}
+
+/* Layout ------------------------------------ */
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.screen-height {
+  min-height: 100vh;
+}
+
+.screen-width {
+  position: relative;
+  left: calc(50% - 50vw);
+  width: 100vw;
+}
+
+/* Image Classes ----------------------------- */
+
+.bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-attachment-fixed {
+  background-attachment: fixed;
+}
+
+@supports ( -webkit-overflow-scrolling: touch ) {
+
+  .bg-attachment-fixed {
+    background-attachment: scroll;
+  }
+}
+
+.wp-block-image {
+  margin-bottom: var(--spacer);
+}
+
+/* Alignment Classes ------------------------- */
+
+.entry-content > * {
+  max-width: 100%;
+}
+
+.alignnone,
+.aligncenter,
+.alignleft,
+.alignright,
+.alignwide {
+  margin: 0 auto var(--spacer);
+}
+
+/* Full */
+.alignfull {
+  margin: 3rem auto;
+  max-width: 100vw;
+  position: relative;
+  width: 100%;
+}
+
+/* Wide */
+.alignwide {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+/* Center */
+.aligncenter,
+.aligncenter img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Left and right */
+.alignleft,
+.alignright {
+  max-width: 50%;
+}
+
+.alignleft {
+  float: left;
+  margin: 0.3rem var(--spacer) var(--spacer);
+}
+
+.alignright {
+  float: right;
+  margin: 0.3rem var(--spacer) var(--spacer);
+}
+
+/* Entry Media ------------------------------- */
+
+.alignfull > figcaption,
+.alignfull > .wp-caption-text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Block Typography Classes ------------------ */
+
+.has-text-align-left {
+  text-align: left;
+}
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.has-text-align-right {
+  text-align: right;
+}
+
+.featured-media img {
+  margin: 0 auto;
+}
+
+.featured-media figcaption {
+  margin: 1.5rem auto 0 auto;
+  text-align: center;
+  width: calc(100% - 5rem);
+}
+
+
+/* Block: Cover ------------------------------ */
+
+.wp-block-cover-image .wp-block-cover__inner-container,
+.wp-block-cover .wp-block-cover__inner-container {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.wp-block-cover-image .wp-block-cover-image-text,
+.wp-block-cover-image .wp-block-cover-text,
+.wp-block-cover-image h2,
+.wp-block-cover .wp-block-cover-image-text,
+.wp-block-cover .wp-block-cover-text,
+.wp-block-cover h2 {
+  max-width: 100%;
+  padding: 0;
+}
+
+.wp-block-cover-image h2,
+.wp-block-cover h2 {
+  font-size: 3.2rem;
+}
+
+/* Block: Embed ------------------------------ */
+
+/* Block: File ------------------------------- */
+
+.wp-block-file {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wp-block-file a:not(.wp-block-file__button) {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.wp-block-file a:not(.wp-block-file__button):not(:last-child) {
+  margin-right: 1rem;
+}
+
+.wp-block-file a:not(.wp-block-file__button):focus,
+.wp-block-file a:not(.wp-block-file__button):hover {
+  text-decoration: underline;
+}
+
+.wp-block-file .wp-block-file__button {
+  font-size: 1.5rem;
+  padding: 1em 1.25em;
+}
+
+.wp-block-file a.wp-block-file__button:visited {
+  opacity: 1;
+}
+
+.wp-block-file a.wp-block-file__button:active,
+.wp-block-file a.wp-block-file__button:focus,
+.wp-block-file a.wp-block-file__button:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+
+/* Block: Gallery ---------------------------- */
+
+.wp-block-gallery ul {
+  list-style: none;
+  margin: 0 0 -1.6rem 0;
+}
+
+figure.wp-block-gallery.alignnone,
+figure.wp-block-gallery.aligncenter {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+figure.wp-block-gallery.alignleft {
+  margin: 0.3rem var(--spacer) var(--spacer) 0;
+}
+
+figure.wp-block-gallery.alignright {
+  margin: 0.3rem 0 var(--spacer) var(--spacer);
+}
+
+figure.wp-block-gallery.alignwide {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+figure.wp-block-gallery.alignfull {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+/* Block: Image ------------------------------ */
+
+/* Block: Media And Text --------------------- */
+
+.wp-block-media-text .wp-block-media-text__content {
+  padding: var(--spacer);
+}
+
+.wp-block-media-text .wp-block-media-text__content p {
+  max-width: none;
+}
+
+.wp-block-media-text__content > *:first-child {
+  margin-top: 0;
+}
+
+.wp-block-media-text__content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Block: Table ------------------------------ */
+
+.wp-block-table {
+  margin-bottom: var(--spacer);
+}
+
+.wp-block-table.is-style-stripes tr:nth-child(odd) {
+  background-color: var(--color-gray-light);
+}
+
+/* Block: List ------------------------------ */
+
+.entry-content ul,
+.entry-content ol {
+  margin-bottom: var(--spacer);
+}
+
+.entry-content ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: .25rem;
+}
+
+.entry-content ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: .25rem;
+}

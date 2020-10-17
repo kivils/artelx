@@ -11,7 +11,7 @@ const FeaturesHomepage = () => {
               nodes {
                   title
                   slug
-                  content
+                  excerpt
                   databaseId
                   featuredImage {
                     node {
@@ -45,7 +45,7 @@ const FeaturesHomepage = () => {
               </Link>
               <div
                 className={styles.content}
-                dangerouslySetInnerHTML={{__html: node.content}}
+                dangerouslySetInnerHTML={{__html: node.excerpt}}
               />
               <div className={styles.footer}>
                 <Link to={node.slug} className={styles.more}>Узнать больше ></Link>

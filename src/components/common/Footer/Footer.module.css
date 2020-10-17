@@ -12,7 +12,7 @@
 }
 
 :local(.col) {
-  padding-bottom: 15px;
+  padding-bottom: var(--spacer);
 
   &:first-child {
     padding-bottom: 0;
@@ -33,7 +33,7 @@
 }
 
 :local(.item) {
-
+  margin-bottom: .25rem;
 }
 
 :local(.link  ) {

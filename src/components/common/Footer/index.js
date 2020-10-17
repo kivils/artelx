@@ -36,7 +36,7 @@ const Footer = ({ siteTitle, subTitle, className }) => {
             <nav className={styles.nav}>
               <ul className={styles.list}>
                 {data.wpMenu.menuItems.nodes.map((node) => {
-                  const reg = /^[/][a-zA-Z\-_]*/gi
+                  const reg = /^[/][a-zA-Z\-_]*/gi // Remove parent page from url
                   return(
                     <li
                       key={node.databaseId}
