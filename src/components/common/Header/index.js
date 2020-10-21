@@ -20,11 +20,11 @@ const Header = ({ siteTitle, subTitle, email, phone }) => {
           <a href="/" className={styles.phone}>{phone}</a>
         </div>
         <div className={styles.actions}>
-          <Button className={styles.btn} type="button">
-            <Link to="/" className={styles.actionLink}>
+          <Link to="/" className={styles.actionLink}>
+            <Button className={styles.btn} type="button">
               Оставить заявку
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </Container>
     </header>

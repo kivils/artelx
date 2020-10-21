@@ -15,7 +15,7 @@ const TestimonialsHomepage = () => {
     graphql`
       fragment Thumbnail on File {
         childImageSharp {
-          fixed(width: 173) {
+          fixed(width: 170, height: 170) {
             ...GatsbyImageSharpFixed
           }
         }

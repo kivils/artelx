@@ -66,6 +66,10 @@
   }
 }
 
+:local(.actionLink) {
+  display: block;
+}
+
 :local(.btn) {
   width: 100%;
 }

@@ -4,6 +4,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+  pathPrefix: 'gatsby-site', // Subfolder on the hosting
   siteMetadata: {
     title: `Артеликс`,
     subtitle: `Интернет-маркетинг для малого бизнеса`,
@@ -30,25 +31,18 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `artelx`,
-        short_name: `artelx`,
+        name: `Artelx`,
+        short_name: `Artelx`,
         start_url: `/`,
         background_color: `#A7E5E0`,
         theme_color: `#A7E5E0`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
