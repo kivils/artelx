@@ -22,17 +22,13 @@
   &:hover {
     color: var(--color-tertiary);
   }
-}
 
-@media (min-width: 992px) {
-  :local(.link) {
+  @media (min-width: 992px) {
     margin-right: 3%;
     width: 47%;
   }
-}
 
-@media (min-width: 1200px) {
-  :local(.link) {
+  @media (min-width: 1200px) {
     width: 30%;
   }
 }

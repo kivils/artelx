@@ -26,12 +26,18 @@
 }
 
 :local(.item) {
-
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 :local(.aside) {
   text-align: center;
   color: #000;
+
+  @media (min-width: 768px) {
+    flex: 0 0 250px;
+  }
 }
 
 :local(.name) {
@@ -41,18 +47,8 @@
 
 :local(.content) {
   color: #2F2D44;
-}
 
-@media (min-width: 768px) {
-  :local(.item) {
-    display: flex;
-  }
-
-  :local(.aside) {
-    flex: 0 0 250px;
-  }
-
-  :local(.content) {
+  @media (min-width: 768px) {
     flex: 1 1 auto;
     max-width: calc(100% - 250px);
     padding-left: 20px;

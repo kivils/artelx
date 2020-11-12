@@ -9,6 +9,23 @@
   @media (min-width:768px) {
     justify-content: flex-start;
   }
+
+  &:local(.isFooter) {
+    :local(.title) {
+      font-size: 24px;
+      letter-spacing: initial;
+      color: var(--color-primary);
+    }
+
+    :local(.subtitle) {
+      font-size: 10px;
+      color: var(--color-primary);
+    }
+
+    :local(.img) {
+      width: 50px;
+    }
+  }
 }
 
 :local(.img) {
@@ -33,19 +50,4 @@
   font-size: 12px;
   text-transform: uppercase;
   color: var(--color-gray-dark);
-}
-
-:local(.isFooter) :local(.title) {
-  font-size: 24px;
-  letter-spacing: initial;
-  color: var(--color-primary);
-}
-
-:local(.isFooter) :local(.subtitle) {
-  font-size: 10px;
-  color: var(--color-primary);
-}
-
-:local(.isFooter) :local(.img) {
-  width: 50px;
 }

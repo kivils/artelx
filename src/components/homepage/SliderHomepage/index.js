@@ -24,7 +24,7 @@ const SliderHomepage = () => {
                   featuredImage {
                     node {
                       altText
-                      remoteFile {
+                      localFile {
                         ...ThumbnailHomepage
                       }
                     }
@@ -43,11 +43,11 @@ const SliderHomepage = () => {
           to={node.slug}
           className={`${styles.item} page_${node.databaseId}`}
         >
-          {!!node?.featuredImage?.node?.remoteFile?.childImageSharp && (
+          {!!node?.featuredImage?.node?.localFile?.childImageSharp && (
             <div className={styles.imgWrapper}>
               <Img
                 fluid={
-                  node.featuredImage.node.remoteFile.childImageSharp.fluid
+                  node.featuredImage.node.localFile.childImageSharp.fluid
                 }
                 className={styles.img}
                 alt={node.featuredImage.node.altText ? node.featuredImage.node.altText : node.title}

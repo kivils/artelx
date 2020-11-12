@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-
+import Img from 'gatsby-image'
 import Container from '../../common/Container'
 import styles from './ForWhomeHomepage.module.css'
 
@@ -15,8 +15,10 @@ const ForWhomeHomepage = () => {
                   databaseId
                   featuredImage {
                     node {
-                      mediaItemUrl
                       altText
+                      localFile {
+                        ...Thumbnail
+                      }
                     }
                   }
               }
@@ -39,15 +41,16 @@ const ForWhomeHomepage = () => {
                 dangerouslySetInnerHTML={{__html: node.content}}
               />
             </div>
-            {node.featuredImage &&
+            {!!node?.featuredImage?.node?.localFile?.childImageSharp && (
               <div className={styles.imgWrapper}>
-                <img
-                  className={styles.img}
-                  src={node.featuredImage.node.mediaItemUrl}
-                  alt={node.featuredImage.node.altText || node.title}
+                <Img
+                  fixed={
+                    node.featuredImage.node.localFile.childImageSharp.fixed
+                  }
+                  alt={node.featuredImage.node.altText ? node.featuredImage.node.altText : node.title}
                 />
               </div>
-            }
+            )}
           </div>
         ))}
       </Container>

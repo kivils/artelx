@@ -31,7 +31,7 @@ const TestimonialsHomepage = () => {
                   featuredImage {
                     node {
                       altText
-                      remoteFile {
+                      localFile {
                         ...Thumbnail
                       }
                     }
@@ -68,10 +68,10 @@ const TestimonialsHomepage = () => {
               >
                 <div className={`${styles.item} page_${node.databaseId}`}>
                   <div className={styles.aside}>
-                    {!!node?.featuredImage?.node?.remoteFile?.childImageSharp && (
+                    {!!node?.featuredImage?.node?.localFile?.childImageSharp && (
                       <Img
                         fixed={
-                          node.featuredImage.node.remoteFile.childImageSharp.fixed
+                          node.featuredImage.node.localFile.childImageSharp.fixed
                         }
                         alt={node.featuredImage.node.altText ? node.featuredImage.node.altText : node.title}
                       />
