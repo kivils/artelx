@@ -21,10 +21,6 @@
     min-height: 300px;
     text-align: left;
   }
-
-  @media (min-width: 1200px) {
-    min-height: 480px;
-  }
 }
 
 :local(.content) {
@@ -50,7 +46,7 @@
     line-height: 1.2;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     font-size: 4rem;
   }
 }
@@ -65,7 +61,7 @@
     font-size: 1.5rem;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     font-size: 2rem;
   }
 }
@@ -77,8 +73,21 @@
   @media (min-width: 992px) {
     flex: 1 1 auto;
   }
+
+  /* Image as svg bg from gatsby */
+  :local(.hasBg) & {
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  /* Backgrounds depending on page ID */
+  :local(.hasBg):local(.page_65) & {
+    background-image: url('../../../images/artelx-for-business.svg');
+  }
 }
 
+/* Image from wordpress page, not svg */
 :local(.img) {
   width: 100%;
   height: 100%;

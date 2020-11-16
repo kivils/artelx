@@ -29,30 +29,34 @@ const ForWhomeHomepage = () => {
   return (
     <div className={styles.root}>
       <Container className={styles.container}>
-        {data.allWpPage.nodes.map((node) => (
-          <div
-            key={node.databaseId}
-            className={`${styles.item} page_${node.databaseId}`}
-          >
-            <div className={styles.content}>
-              <h2 className={styles.title}>{node.title}</h2>
+        {data.allWpPage.nodes.map(node => {
+            const hasImage = !!node?.featuredImage?.node?.localFile?.childImageSharp
+            return (
               <div
-                className={styles.text}
-                dangerouslySetInnerHTML={{__html: node.content}}
-              />
-            </div>
-            {!!node?.featuredImage?.node?.localFile?.childImageSharp && (
-              <div className={styles.imgWrapper}>
-                <Img
-                  fixed={
-                    node.featuredImage.node.localFile.childImageSharp.fixed
-                  }
-                  alt={node.featuredImage.node.altText ? node.featuredImage.node.altText : node.title}
-                />
+                key={node.databaseId}
+                className={`${styles.item} ${styles['page_' + node.databaseId]} ${hasImage ? styles.hasImage : styles.hasBg}`}
+                data-page-id={node.databaseId}
+              >
+                <div className={styles.content}>
+                  <h2 className={styles.title}>{node.title}</h2>
+                  <div
+                    className={styles.text}
+                    dangerouslySetInnerHTML={{__html: node.content}}
+                  />
+                </div>
+                <div className={styles.imgWrapper}>
+                  {hasImage && (
+                    <Img
+                      fixed={
+                        node.featuredImage.node.localFile.childImageSharp.fixed
+                      }
+                      alt={node.featuredImage.node.altText ? node.featuredImage.node.altText : node.title}
+                    />
+                  )}
+                </div>
               </div>
-            )}
-          </div>
-        ))}
+            )
+          })}
       </Container>
     </div>
   )

@@ -32,10 +32,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto`,
+          `source sans pro\:400,700,900`
+        ],
+        display: 'swap'
+      }
+    },
+    {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /.cache/,
+          include: /assets/,
         },
       },
     },

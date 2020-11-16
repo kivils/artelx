@@ -40,14 +40,44 @@
 }
 
 :local(.title) {
-  @media (min-width: 992px) {
+  /* Image from wordpress page, not svg */
+  &:local(.hasImage) {
     display: flex;
     align-items: center;
-    max-width: 300px;
+  }
+
+  /* Image as svg bg from gatsby */
+  &:local(.hasBg) {
+    padding-top: 110px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+
+    @media (min-width: 992px) {
+      display: flex;
+      align-items: center;
+      padding-top: 0;
+      padding-left: 116px;
+      max-width: 300px;
+      min-height: 96px;
+      background-position: 0 50%;
+    }
+
+    /* Backgrounds depending on page ID */
+    :local(.page_95) & {
+      background-image: url('../../../images/artelx-context.svg');
+    }
+
+    :local(.page_99) & {
+      background-image: url('../../../images/artelx-promote.svg');
+    }
+    :local(.page_103) & {
+      background-image: url('../../../images/artelx-create.svg');
+    }
   }
 }
 
-:local(.icon) {
+/* If icon exist, and it is not an svg */
+:local(.iconWrapper) {
   display: block;
   margin: 0 auto 10px;
   width: 96px;
@@ -58,6 +88,11 @@
     max-width: 96px;
     margin: 0 15px 0 0;
   }
+}
+
+:local(.icon) {
+  width: 100%;
+  height: 100%;
 }
 
 :local(.content) {

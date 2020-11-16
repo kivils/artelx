@@ -18,6 +18,11 @@
 
   --spacer: 1rem;
 }
+
+body {
+  overflow-y: scroll;
+}
+
 *,
 *::before,
 *::after {
