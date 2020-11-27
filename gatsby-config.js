@@ -32,13 +32,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
-          `Roboto`,
-          `source sans pro\:400,700,900`
-        ],
-        display: 'swap'
+          {
+            family: 'Roboto',
+            variable: false,
+            weights: ['400','700','900']
+          }
+        ]
       }
     },
     {

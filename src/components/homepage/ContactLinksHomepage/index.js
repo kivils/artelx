@@ -28,15 +28,21 @@ const ContactLinksHomepage = () => {
     <div className={styles.root}>
       <Container className={styles.container}>
         <h2 className={styles.title}>Расскажите нам о своей проблеме</h2>
-        {data.allWpPage.nodes.map((node) => (
-          <Link
-            key={node.databaseId}
-            to={node.slug}
-            className={styles.link}
-          >
-            {node.title}
-          </Link>
-        ))}
+        {data.allWpPage.nodes.length &&
+          <ul className={styles.list}>
+            {data.allWpPage.nodes.map((node) => (
+              <li className={styles.item}>
+                <Link
+                  key={node.databaseId}
+                  to={node.slug}
+                  className={styles.link}
+                >
+                  {node.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        }
       </Container>
     </div>
   )

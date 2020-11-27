@@ -15,7 +15,7 @@ const TestimonialsHomepage = () => {
     graphql`
       fragment Thumbnail on File {
         childImageSharp {
-          fixed(width: 170, height: 170) {
+          fixed(width: 164, height: 164) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -70,6 +70,7 @@ const TestimonialsHomepage = () => {
                   <div className={styles.aside}>
                     {!!node?.featuredImage?.node?.localFile?.childImageSharp && (
                       <Img
+                        className={styles.img}
                         fixed={
                           node.featuredImage.node.localFile.childImageSharp.fixed
                         }

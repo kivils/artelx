@@ -1,5 +1,9 @@
 :local(.root) {
   padding: 30px 0;
+
+  @media (min-width: 992px) {
+    padding-bottom: 120px;
+  }
 }
 
 :local(.row) {
@@ -56,7 +60,7 @@
       display: flex;
       align-items: center;
       padding-top: 0;
-      padding-left: 116px;
+      padding-left: 120px;
       max-width: 300px;
       min-height: 96px;
       background-position: 0 50%;
@@ -96,14 +100,14 @@
 }
 
 :local(.content) {
-  margin-bottom: 10px;
+
 }
 
 :local(.footer) {
   margin-top: auto;
 
   @media (min-width: 992px) {
-    padding-top: 10px;
+    padding-top: .825rem;
     border-top: 1px solid var(--color-link);}
 }
 

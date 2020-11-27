@@ -11,6 +11,11 @@
   }
 
   &:local(.isFooter) {
+    :local(.text) {
+      margin-left: .75rem;
+      padding-top: .75rem;
+    }
+
     :local(.title) {
       font-size: 24px;
       letter-spacing: initial;
@@ -18,12 +23,12 @@
     }
 
     :local(.subtitle) {
-      font-size: 10px;
+      font-size: 8px;
       color: var(--color-primary);
     }
 
     :local(.img) {
-      width: 50px;
+      width: 66px;
     }
   }
 }
@@ -38,7 +43,9 @@
 
 :local(.title) {
   display: block;
+  margin-bottom: .25rem;
   font-size: 48px;
+  line-height: 1;
   font-weight: 900;
   letter-spacing: 4px;
   text-transform: uppercase;
