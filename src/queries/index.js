@@ -9,6 +9,10 @@ const SiteMetaQuery = () => {
           subtitle
           email
           phone
+          telegram
+          viber
+          whatsup
+          vkontakte
         }
       }
     }

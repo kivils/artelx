@@ -1,0 +1,24 @@
+:local(.root) {
+  padding: 40px 0;
+
+  @media (min-width:992px) {
+    padding: 80px 0;
+  }
+}
+
+:local(.container) {
+
+}
+
+:local(.wrapper) {
+  text-align: center;
+}
+
+:local(.title) {
+  font-size: 2rem;
+
+  @media (min-width:992px) {
+    font-size: 3.25rem;
+    font-weight: 400;
+  }
+}

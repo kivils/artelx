@@ -7,6 +7,7 @@ import FeaturesHomepage from '../components/homepage/FeaturesHomepage'
 import ForWhomeHomepage from '../components/homepage/ForWhomeHomepage'
 import ForHowLongHomepage from '../components/homepage/ForHowLongHomepage'
 import TestimonialsHomepage from '../components/homepage/TestimonialsHomepage'
+import YandexContactForm from '../components/homepage/YandexContactForm'
 import ContactLinksHomepage from '../components/homepage/ContactLinksHomepage'
 
 const IndexPage = () => (
@@ -18,6 +19,7 @@ const IndexPage = () => (
     <ForHowLongHomepage/>
     <TestimonialsHomepage/>
     <ContactLinksHomepage/>
+    <YandexContactForm/>
   </Layout>
 )
 

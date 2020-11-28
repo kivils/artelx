@@ -34,6 +34,11 @@ const Layout = ({ children }) => {
         className={styles.footer}
         siteTitle={data.site.siteMetadata?.title || `Title`}
         subTitle={data.site.siteMetadata?.subtitle || `SubTitle`}
+        email={data.site.siteMetadata?.email || `email`}
+        telegram={data.site.siteMetadata?.telegram || `telegram`}
+        viber={data.site.siteMetadata?.viber || `viber`}
+        whatsup={data.site.siteMetadata?.whatsup || `whatsup`}
+        vkontakte={data.site.siteMetadata?.vkontakte || `vkontakte`}
       />
     </div>
   )

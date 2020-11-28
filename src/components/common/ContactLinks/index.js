@@ -9,41 +9,40 @@ import ViberIcon from '../../../images/viber.svg'
 import WhatsupIcon from '../../../images/whatsapp.svg'
 import VkIcon from '../../../images/vk.svg'
 
-const links = [
-  {
-    link: 'mailto:mail@artelx.ru',
-    label: 'mail@artelx.ru',
-    icon: MailIcon
-  },
-  {
-    link: 'https://t.me/artelxru',
-    label: 'Telegram',
-    icon: TelegramIcon
-  },
-  {
-    link: 'viber://chat?number=%2B79531632748',
-    label: 'Viber',
-    icon: ViberIcon
-  },
-  {
-    link: 'https://wa.me/79531632748',
-    label: 'WhatsApp',
-    icon: WhatsupIcon
-  },
-  {
-    link: 'https://vk.com/artelx',
-    label: 'Вконтакте',
-    icon: VkIcon
-  },
-]
-
-const ContactLinks = () => {
+const ContactLinks = ({ email, telegram, viber, whatsup, vkontakte }) => {
+  const links = [
+    {
+      link: 'mailto:' + email,
+      label: email,
+      icon: MailIcon
+    },
+    {
+      link: telegram,
+      label: 'Telegram',
+      icon: TelegramIcon
+    },
+    {
+      link: viber,
+      label: 'Viber',
+      icon: ViberIcon
+    },
+    {
+      link: whatsup,
+      label: 'WhatsApp',
+      icon: WhatsupIcon
+    },
+    {
+      link: vkontakte,
+      label: 'Вконтакте',
+      icon: VkIcon
+    },
+  ]
   return (
     <ul className={styles.root}>
       {links.length && links.map((item, index) => {
         return (
         <li key={index} className={styles.item}>
-          <a href={item.link} className={styles.link}>
+          <a href={item.link} className={styles.link} target="_blank" rel="noreferrer">
             <img src={item.icon} className={styles.icon} alt="" aria-hidden="true"/>
             <span>{item.label}</span>
           </a>
@@ -56,11 +55,19 @@ const ContactLinks = () => {
 }
 
 ContactLinks.propTypes = {
-  siteTitle: PropTypes.string,
-  subTitle: PropTypes.string,
   email: PropTypes.string,
-  phone: PropTypes.string,
+  telegram: PropTypes.string,
+  viber: PropTypes.string,
+  whatsup: PropTypes.string,
+  vkontakte: PropTypes.string,
 }
 
+ContactLinks.defaultProps = {
+  email: ``,
+  telegram: ``,
+  viber: ``,
+  whatsup: ``,
+  vkontakte: ``,
+}
 
 export default ContactLinks

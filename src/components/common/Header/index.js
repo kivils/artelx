@@ -16,8 +16,8 @@ const Header = ({ siteTitle, subTitle, email, phone }) => {
           <Logo siteTitle={siteTitle} subTitle={subTitle}/>
         </div>
         <div className={styles.info}>
-          <a href="/" className={styles.email}>{email}</a>
-          <a href="/" className={styles.phone}>{phone}</a>
+          <a href={'mailto:' + email} className={styles.email}>{email}</a>
+          <a href={'tel:' + phone} className={styles.phone}>{phone}</a>
         </div>
         <div className={styles.actions}>
           <Link to="/" className={styles.actionLink}>

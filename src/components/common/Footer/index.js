@@ -7,7 +7,7 @@ import ContactLinks from '../ContactLinks'
 
 import styles from './Footer.module.css'
 
-const Footer = ({ siteTitle, subTitle, className }) => {
+const Footer = ({ siteTitle, subTitle, className, email, telegram, viber, whatsup, vkontakte }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -37,7 +37,13 @@ const Footer = ({ siteTitle, subTitle, className }) => {
               <Logo siteTitle={siteTitle} subTitle={subTitle} isFooter/>
             </div>
             <div className={styles.contactsList}>
-              <ContactLinks/>
+              <ContactLinks
+                email={email}
+                telegram={telegram}
+                viber={viber}
+                whatsup={whatsup}
+                vkontakte={vkontakte}
+              />
             </div>
             <p className={styles.copy}>
               © 2008 - {now.getFullYear()} Веб-студия "Артеликс" <br/>
@@ -80,12 +86,22 @@ Footer.propTypes = {
   className: PropTypes.string,
   siteTitle: PropTypes.string,
   subTitle: PropTypes.string,
+  email: PropTypes.string,
+  telegram: PropTypes.string,
+  viber: PropTypes.string,
+  whatsup: PropTypes.string,
+  vkontakte: PropTypes.string,
 }
 
 Footer.defaultProps = {
   className: ``,
   siteTitle: ``,
   subTitle: ``,
+  email: ``,
+  telegram: ``,
+  viber: ``,
+  whatsup: ``,
+  vkontakte: ``,
 }
 
 export default Footer

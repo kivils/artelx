@@ -31,7 +31,7 @@ const ContactLinksHomepage = () => {
         {data.allWpPage.nodes.length &&
           <ul className={styles.list}>
             {data.allWpPage.nodes.map((node) => (
-              <li className={styles.item}>
+              <li key={node.databaseId} className={styles.item}>
                 <Link
                   key={node.databaseId}
                   to={node.slug}
