@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/common/Layout'
 import SEO from '../../components/common/Seo'
 import Container from '../../components/common/Container'
+import styles from './Page.module.css'
 
 const Page = ({ data }) => {
   const { /*nextPage, previousPage, */page } = data
@@ -12,8 +13,10 @@ const Page = ({ data }) => {
     <Layout>
       <SEO title={title} />
       <Container>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: content }} className="entry-content" />
+        <div className={styles.article}>
+          <h1 className={styles.title}>{title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: content }} className={styles.content} />
+        </div>
       </Container>
     </Layout>
   )

@@ -23,22 +23,22 @@ const Layout = ({ children }) => {
     <div className={styles.root}>
       <Header
         className={styles.header}
-        siteTitle={data.site.siteMetadata?.title || `Title`}
-        subTitle={data.site.siteMetadata?.subtitle || `SubTitle`}
-        email={data.site.siteMetadata?.email || `email`}
-        phone={data.site.siteMetadata?.phone || `phone`}
+        siteTitle={data.site.siteMetadata?.title}
+        subTitle={data.site.siteMetadata?.subtitle}
+        email={data.site.siteMetadata?.email}
+        phone={data.site.siteMetadata?.phone}
       />
       <Mainmenu styles={styles.menu}/>
       <main className={styles.main}>{children}</main>
       <Footer
         className={styles.footer}
-        siteTitle={data.site.siteMetadata?.title || `Title`}
-        subTitle={data.site.siteMetadata?.subtitle || `SubTitle`}
-        email={data.site.siteMetadata?.email || `email`}
-        telegram={data.site.siteMetadata?.telegram || `telegram`}
-        viber={data.site.siteMetadata?.viber || `viber`}
-        whatsup={data.site.siteMetadata?.whatsup || `whatsup`}
-        vkontakte={data.site.siteMetadata?.vkontakte || `vkontakte`}
+        siteTitle={data.site.siteMetadata?.title}
+        subTitle={data.site.siteMetadata?.subtitle}
+        email={data.site.siteMetadata?.email}
+        telegram={data.site.siteMetadata?.telegram}
+        viber={data.site.siteMetadata?.viber}
+        whatsup={data.site.siteMetadata?.whatsup}
+        vkontakte={data.site.siteMetadata?.vkontakte}
       />
     </div>
   )

@@ -42,7 +42,7 @@ module.exports = {
           {
             family: 'Roboto',
             variable: false,
-            weights: ['400','700','900']
+            weights: ['300', '400','700','900']
           }
         ]
       }

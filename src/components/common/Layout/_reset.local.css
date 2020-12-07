@@ -16,7 +16,7 @@
   --color-gray-dark: #2F2D44;
   --color-gray-light: #EEE;
 
-  --spacer: 1rem;
+  --spacer: 1.5rem;
 }
 
 body {
@@ -36,6 +36,8 @@ a {
   &:focus,
   &:active {
     outline: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px var(--color-artelx);
   }
 }
 

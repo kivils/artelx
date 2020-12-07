@@ -267,22 +267,3 @@ figure.wp-block-gallery.alignfull {
 .wp-block-table.is-style-stripes tr:nth-child(odd) {
   background-color: var(--color-gray-light);
 }
-
-/* Block: List ------------------------------ */
-
-.entry-content ul,
-.entry-content ol {
-  margin-bottom: var(--spacer);
-}
-
-.entry-content ul li {
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-bottom: .25rem;
-}
-
-.entry-content ol li {
-  list-style-type: decimal;
-  list-style-position: inside;
-  margin-bottom: .25rem;
-}

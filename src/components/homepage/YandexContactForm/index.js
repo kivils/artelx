@@ -10,6 +10,7 @@ const YandexContactForm = () => {
         wpPage(databaseId: {eq: 330}) {
           link
           title
+          content
         }
       }
     `
@@ -20,6 +21,7 @@ const YandexContactForm = () => {
       <Container className={styles.container}>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>{data.wpPage.title}</h2>
+          <div className={styles.content} dangerouslySetInnerHTML={{ __html: data.wpPage.content }}/>
         </div>
       </Container>
     </div>
