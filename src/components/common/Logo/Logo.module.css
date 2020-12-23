@@ -1,5 +1,5 @@
 :local(.root) {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
 
   &:hover {
@@ -14,6 +14,7 @@
     :local(.text) {
       margin-left: .75rem;
       padding-top: .75rem;
+      text-align: left;
     }
 
     :local(.title) {
@@ -24,37 +25,75 @@
 
     :local(.subtitle) {
       font-size: 8px;
+      letter-spacing: initial;
       color: var(--color-primary);
     }
 
     :local(.img) {
       width: 66px;
+      height: initial;
+    }
+  }
+
+  &:local(.isMenu) {
+    :local(.subtitle) {
+      color: var(--color-artelx);
     }
   }
 }
 
 :local(.img) {
+  height: 45px;
 
+  @media (min-width:768px) {
+    height: 54px;
+  }
+
+  @media (min-width:992px) {
+    height: 77px;
+  }
 }
 
 :local(.text) {
   margin-left: 1rem;
+  text-align: left;
 }
 
 :local(.title) {
   display: block;
   margin-bottom: .25rem;
-  font-size: 48px;
+  font-size: 30px;
   line-height: 1;
   font-weight: 900;
-  letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--color-artelx);
+  letter-spacing: 10px;
+
+  @media (min-width:768px) {
+    font-size: 36px;
+    letter-spacing: 7px;
+  }
+
+  @media (min-width:992px) {
+    font-size: 50px;
+    letter-spacing: 7px;
+  }
 }
 
 :local(.subtitle) {
   display: block;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   color: var(--color-gray-dark);
+  letter-spacing: 0;
+
+  @media (min-width:768px) {
+    font-size: 10px;
+    letter-spacing: .2px;
+  }
+
+  @media (min-width:992px) {
+    font-size: 12px;
+    letter-spacing: .8px;
+  }
 }

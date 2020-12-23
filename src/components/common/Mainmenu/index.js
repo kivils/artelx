@@ -1,10 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Container from '../Container'
+import Logo from '../Logo'
 
 import styles from './Mainmenu.module.css'
 
-const Mainmenu = () => {
+const Mainmenu = ({ siteTitle, subTitle }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -23,6 +25,9 @@ const Mainmenu = () => {
   return (
     <div className={styles.root}>
       <Container>
+        <div className={styles.logoWrapper}>
+          <Logo siteTitle={siteTitle} subTitle={subTitle} isMobileMenu={true}/>
+        </div>
         <nav className={styles.nav}>
           <ul className={styles.list}>
             {data.wpMenu.menuItems.nodes.map((node) => {
@@ -50,7 +55,13 @@ const Mainmenu = () => {
 }
 
 Mainmenu.propTypes = {
+  siteTitle: PropTypes.string,
+  subTitle: PropTypes.string,
+}
 
+Mainmenu.defaultProps = {
+  siteTitle: ``,
+  subTitle: ``,
 }
 
 export default Mainmenu

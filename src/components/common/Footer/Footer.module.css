@@ -61,6 +61,11 @@
 :local(.lawLink) {
   font-size: .75rem;
   color: var(--color-artelx);
+
+  &:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
 }
 
 :local(.nav) {
@@ -85,6 +90,7 @@
   color: var(--color-white);
 
   &:hover {
+    color: var(--color-primary);
     text-decoration: underline;
   }
 }

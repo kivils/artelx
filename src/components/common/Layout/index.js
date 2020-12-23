@@ -10,7 +10,6 @@ import PropTypes from 'prop-types'
 
 import Header from '../Header'
 import Footer from '../Footer'
-import Mainmenu from '../Mainmenu'
 
 import './basic-styles.css'
 import styles from './Layout.module.css'
@@ -28,7 +27,6 @@ const Layout = ({ children }) => {
         email={data.site.siteMetadata?.email}
         phone={data.site.siteMetadata?.phone}
       />
-      <Mainmenu styles={styles.menu}/>
       <main className={styles.main}>{children}</main>
       <Footer
         className={styles.footer}

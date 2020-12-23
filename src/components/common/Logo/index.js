@@ -5,9 +5,9 @@ import { Link } from 'gatsby'
 import styles from './Logo.module.css'
 import artelx from '../../../images/artelx.svg'
 
-const Logo = ({ siteTitle, subTitle, isFooter }) => {
+const Logo = ({ siteTitle, subTitle, isFooter, isMobileMenu }) => {
   return (
-    <Link to="/" className={`${styles.root} ${isFooter && styles.isFooter}`}>
+    <Link to="/" className={`${styles.root} ${isFooter ? styles.isFooter : ''} ${isMobileMenu ? styles.isMenu : ''}`}>
       <img src={artelx} alt={siteTitle} className={styles.img}/>
       <span className={styles.text}>
         <span className={styles.title}>{siteTitle}</span>
@@ -20,13 +20,15 @@ const Logo = ({ siteTitle, subTitle, isFooter }) => {
 Logo.propTypes = {
   siteTitle: PropTypes.string,
   subTitle: PropTypes.string,
-  isFooter: PropTypes.bool
+  isFooter: PropTypes.bool,
+  isMobileMenu: PropTypes.bool
 }
 
 Logo.defaultProps = {
   siteTitle: ``,
   subTitle: ``,
-  isFooter: false
+  isFooter: false,
+  isMobileMenu: false
 }
 
 export default Logo

@@ -41,9 +41,12 @@
 
 :local(.link) {
   color: var(--color-base);
+  display: block;
+  margin-bottom: 1rem;
 }
 
 :local(.title) {
+  margin: 0;
   /* Image from wordpress page, not svg */
   &:local(.hasImage) {
     display: flex;
@@ -100,7 +103,9 @@
 }
 
 :local(.content) {
-
+  p {
+    margin-bottom: 1rem;
+  }
 }
 
 :local(.footer) {

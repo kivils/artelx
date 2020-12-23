@@ -3,7 +3,7 @@
 }
 
 :local(.item) {
-  margin-bottom: .5rem;
+  margin-bottom: .75rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -16,6 +16,7 @@
   color: #CBEBFB;
 
   &:hover {
+    color: var(--color-primary);
     text-decoration: underline;
   }
 }
