@@ -57,6 +57,10 @@
 }
 
 :local(.item) {
+  @media (max-width: 767px) {
+    font-size: .75rem;
+  }
+
   @media (min-width: 768px) {
     display: flex;
   }

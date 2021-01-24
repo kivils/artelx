@@ -85,3 +85,19 @@
     }
   }
 }
+
+/* Yandex form */
+iframe[name="ya-form-60099bee0d66e760301520ba"] {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 700px;
+  overflow-y: auto;
+
+  @media (min-width:768px) {
+    max-width: 655px;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px #ccc;
+    height: 780px;
+  }
+}

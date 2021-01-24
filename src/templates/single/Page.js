@@ -7,7 +7,7 @@ import styles from './Page.module.css'
 
 const Page = ({ data }) => {
   const { /*nextPage, previousPage, */page } = data
-  const { title, content } = page
+  const { title, content, excerpt } = page
 
   return (
     <Layout>
@@ -15,6 +15,7 @@ const Page = ({ data }) => {
       <Container>
         <div className={styles.article}>
           <h1 className={styles.title}>{title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: excerpt }} className={styles.excerpt} />
           <div dangerouslySetInnerHTML={{ __html: content }} className={styles.content} />
         </div>
       </Container>
@@ -29,6 +30,7 @@ export const query = graphql`
     page: wpPage(id: { eq: $id }) {
       title
       content
+      excerpt
     }
 
     nextPage: wpPage(id: { eq: $nextPage }) {

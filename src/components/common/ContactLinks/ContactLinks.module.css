@@ -3,7 +3,7 @@
 }
 
 :local(.item) {
-  margin-bottom: .75rem;
+  margin-bottom: 1.5rem;
 
   &:last-child {
     margin-bottom: 0;

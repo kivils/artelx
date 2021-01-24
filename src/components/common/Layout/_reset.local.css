@@ -32,6 +32,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  transition: color .3s, border-color .3s, opacity .3s;
 }
 
 button {

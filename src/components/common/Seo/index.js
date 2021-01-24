@@ -69,7 +69,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      {/* Here you can add scripts for G and Y */}
+    </Helmet>
   )
 }
 

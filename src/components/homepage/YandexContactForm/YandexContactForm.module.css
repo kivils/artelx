@@ -23,3 +23,7 @@
     font-weight: 400;
   }
 }
+
+:local(.content) {
+  margin: 0 auto;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import Container from '../Container'
 import Logo from '../Logo'
 import Button from '../Button'
@@ -14,9 +14,19 @@ import styles from './Header.module.css'
 const Header = ({ siteTitle, subTitle, email, phone }) => {
   const [ isMenuVisible, setMenuVisibility] = useState(false)
 
+  const data = useStaticQuery(
+    graphql`
+      query {
+        wpPage(databaseId: {eq: 258}) {
+          link
+          title
+        }
+      }
+    `
+  )
+
   const onMenuIconClick = () => {
     setMenuVisibility(!isMenuVisible)
-    console.log('mmm')
   }
 
   return (
@@ -34,7 +44,7 @@ const Header = ({ siteTitle, subTitle, email, phone }) => {
             <a href={'tel:' + phone} className={styles.phone}>{phone}</a>
           </div>
           <div className={styles.actions}>
-            <Link to="/" className={styles.actionLink}>
+            <Link to={data.wpPage.link} className={styles.actionLink}>
               <Button className={styles.btn} type="button">
                 Оставить заявку
               </Button>

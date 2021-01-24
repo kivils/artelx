@@ -52,6 +52,10 @@
 :local(.copy) {
   margin-bottom: 0;
   color: var(--color-white);
+
+  @media (max-width:767px) {
+    font-size: .75rem;
+  }
 }
 
 :local(.law) {

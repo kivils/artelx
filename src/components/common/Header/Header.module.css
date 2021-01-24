@@ -24,7 +24,6 @@
 
 :local(.logoWrapper) {
   margin-bottom: 2rem;
-  text-align: center;
 
   @media (min-width:992px) {
     margin-right: 1rem;
@@ -98,8 +97,8 @@
 
 :local(.menuBtn) {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  right: 0;
   background-color: transparent;
   z-index: 9;
 

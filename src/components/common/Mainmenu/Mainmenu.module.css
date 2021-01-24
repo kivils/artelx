@@ -58,7 +58,7 @@
   }
 
   @media (min-width:768px) {
-    padding: 3px 2px;
+    padding: 3px 2px 5px;
     font-size: 1.125rem;
     line-height: 1.5rem;
     color: var(--color-base);
