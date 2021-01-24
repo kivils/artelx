@@ -8,7 +8,7 @@ const YandexContactForm = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        wpPage(databaseId: {eq: 330}) {
+        wpPage(databaseId: {eq: 267}) {
           link
           title
           content
